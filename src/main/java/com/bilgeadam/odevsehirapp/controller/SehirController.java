@@ -41,21 +41,14 @@ public class SehirController {
         return sehirRepository.findAll();
     }
 
-    @GetMapping("/sehir/ara/ad/{ad}")
+    @GetMapping("/sehirad/{ad}")
     public Sehir findSehirByAd(@PathVariable("ad") String ad)
     {
         Sehir sehir = sehirRepository.findByAd(ad);
         return sehir;
     }
 
-    @GetMapping("/sehirad/{id}")
-    public String getSehirAd(@PathVariable("id") long id)
-    {
 
-        Sehir sehir = getSehir(id);
-        return sehir.getAd();
-
-    }
 
 
 
